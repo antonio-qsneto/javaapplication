@@ -1,3 +1,7 @@
+/*
+	Create: Antonio Neto
+* */
+
 package com.antonio.mc;
 
 import java.util.Arrays;
@@ -36,6 +40,9 @@ public class ProjetomcApplication implements CommandLineRunner{
 	private ClienteRepository clienteRepository;
 	@Autowired
 	private EnderecoRepository enderecoRepository;
+
+	public ProjetomcApplication() {
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(ProjetomcApplication.class, args);
@@ -85,9 +92,6 @@ public class ProjetomcApplication implements CommandLineRunner{
 		
 		clienteRepository.saveAll(Arrays.asList(cli1));
 		enderecoRepository.saveAll(Arrays.asList(e1, e2));
-		
-		
-		
 	}
 
 }
